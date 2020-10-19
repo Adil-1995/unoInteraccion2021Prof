@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'unoInteraccion2021Prof';
+  nombre = 'lolo';
+  fecha = new Date(Date.now());
+  mio = ' ';
+  escribe() {
+    console.log(this.title);
+  }
 }
