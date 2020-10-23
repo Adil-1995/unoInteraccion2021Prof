@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'unoInteraccion2021Prof';
-  nombre = 'lolo';
+  /*
+  Aqui podemos mirar como hemos pasado la informacion del nombre
+  al hijo
+  */
+  title = 'titulo';
+  nombre = 'lolo';  
+  vacia=''
   fecha = new Date(Date.now());
-  mio = ' ';
+  mio = 'mio ';
   escribe() {
     console.log(this.title);
   }
+  
 }

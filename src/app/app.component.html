@@ -2,8 +2,24 @@
 <div style="text-align:center">
   {{title}}
 </div>
+<!-- Introducir datos en el template -->
 <div>
-   <!-- El camino de angular para escribir valores del componente en el html -->   
-   <input type="text" [(ngModel)]="title">
-   <h3>{{title}}</h3>
+  <p>titulo solo con ng<input type="text" [ngModel]='title'></p>
+
+</div>>
+<!-- Es equivalente a esto pero esta forma por sondeo es menos eficiente -->
+<input type="text" value={{title}}>
+<!-- Como reaccionar a eventos del template -->
+<input type="text" (click)="escribe()">
+<!-- usando angular -->
+<!-- Para que el ngmodelChange funcione debe estar en el mismo tag que el [ngmodel] -->
+<input type="text" [ngModel]="vacia" (ngModelChange)="title='otra cosa'">
+<button (click)="escribe()"> Mirar</button>
+<div>
+  <input type=text [ngModel]="fecha">
 </div>
+<p>Titulo con banana in a box:<input type="text" [(ngModel)]="title"></p>
+<div>
+  <input type=text [ngModel]="mio" (ngModelChange)="title=$event"> 
+</div>
+<h1> {{title}}</h1>
